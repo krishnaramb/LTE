@@ -4,7 +4,8 @@
 #script.py -i <build_path_in linux_format> -o <outputfile>
 
 #example
-#C:\Users\kbudhath>E:\Python_Practice\reader\slickeditModem_6.py -i <input location> -o <MeroOutput.vpj>
+#C:\Users\kbudhath>E:\Python_Practice\reader\slickeditModem_6.py -i //snowcone/builds718/INTEGRATION/MPSS.AT.2.0-00518-9655_RMTEFS_TEST-1 -o MeroOutput.vpj
+#Author: Krishna Ram Budhathoki
 
 import os
 import sys, getopt
@@ -52,7 +53,7 @@ def main (argv):
           
     componets = ['lte','mcs','wcdma','mmcp','geran'] #add the other components if you want;'mcs','wcdma','mmcp','geran'
     for tech in componets :
-        
+        #walk_dir = "//snowcone/builds718/INTEGRATION/MPSS.AT.2.0-00518-9655_RMTEFS_TEST-1/modem_proc"
         walk_dir_root = os.path.join(inputpath,'modem_proc')
         walk_dir = walk_dir_root
         walk_dir = os.path.join(walk_dir,tech)
