@@ -1,4 +1,10 @@
-### SRB cheat sheet:
+### Contents
+1. [SRB cheat sheet](#SRB-cheat-sheet)
+2. [RRCConnectionReconfiguration](#rrcconnectionreconfiguration)
+
+
+
+### SRB cheat sheet
 
 SRB (Signaling Radio Bearer) mapping for LTE Signaling Message
 
@@ -103,6 +109,31 @@ As mentioned in the LTE SRB table, there are three types of SRB in the LTE techn
 SRB1 is also used to encapsulate NAS message if SRB2 has not been configured. <br>
 SRB2 has lower priority then SRB1 and it is always configured after security activation.<br>
 SRB0 uses transparent mode RLC while SRB1 and SRB2 use acknowledged mode RLC.
+
+
+:angry: **Q. Now the obvious question is, who will setup the SRB2**:question:<br>
+A: RRCConnectionReconfiguration
+
+### RRCConnectionReconfiguration
+**Direction: ** E-UTRAN => UE <br>
+**Signalling Radio Bearer:** SRB1 <br>
+**RLC Mode:** AM <br>
+**Logical Channel:** DCCH <br>
+**Transport Channel:** DL-SCH <br>
+
+**RRC CONNECTION RECONFIGURATION message **is the command _to modify an RRC connection_. The purpose of this procedure is,
+* To establish/modify/release Radio Bearers
+* To perform Handover
+* To setup/modify/release Measurements
+* To add/modify/release SCells
+* Dedicated NAS Information might also be transferred from eNodeB to U
+
+**Note that E-UTRAN includes the mobilityControlInfo (Handover) only when_ AS-security has been activated_, and SRB2 with at least one DRB are setup but not suspended. ** :boom: The establishment of RBs (other than SRB1, which is established during RRC connection establishment) is included only when **AS-security has been activated**
+
+  **Q. What is AS-Security and how it is implemented?**:boom:
+
+If the UE is unable to comply with (part of) the configuration included in the RRC CONNECTION RECONFIGURATION message, the UE shall continue using the configuration used prior to the reception of RRC CONNECTION RECONFIGURATION message. If the **security** has not been activated, UE should leave RRC_CONNECTED state, else,** UE initiates the connection re-establishment procedure which is used to resume SRB1 operation and to reactivate security**
+
 
 _References:_ <br>
 1. [http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html)
