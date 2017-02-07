@@ -4,11 +4,11 @@ SRB (Signaling Radio Bearer) mapping for LTE Signaling Message
 
 One of the most common mistake we make and spend a lot of time for troubleshooting would be 'Network send some message but does not get any response from UE'. One of the most common reason in this situation (especially when you see the message has gone through L1) would be mismatchs between Signalling message and SRB.
 
-_3GPP 36.331 4.2.2 Signalling radio bearers says :_ <br>
-**SRB0 is for RRC messages using the CCCH logical channel;**<br>
-**SRB1 is for RRC messages (which may include a piggybacked NAS message) as well as for NAS messages prior to the establishment of SRB2, all using DCCH logical channel;**<br>
+_3GPP 36.331 4.2.2 Signalling radio bearers says :_  <br>
+**SRB0 is for RRC messages using the CCCH logical channel;** <br>
+**SRB1 is for RRC messages (which may include a piggybacked NAS message) as well as for NAS messages prior to the establishment of SRB2, all using DCCH logical channel;** <br>
 
-**SRB2 is for RRC messages which include logged measurement information as well as for NAS messages, all using DCCH logical channel. SRB2 has a lower-priority than SRB1 and is always configured by E-UTRAN after security activation.**<br>
+**SRB2 is for RRC messages which include logged measurement information as well as for NAS messages, all using DCCH logical channel. SRB2 has a lower-priority than SRB1 and is always configured by E-UTRAN after security activation.** <br>
 
 Also 36.331 defines the SRB mapping for each message as shown below. I recommend you to pay attention to these mapping examples. If SRB number does not match between the sender and the reciever, the message would not reach the destination even though the message is properly sent and reach the lower layer of the destination.
 
