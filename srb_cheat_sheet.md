@@ -10,7 +10,9 @@ _3GPP 36.331 4.2.2 Signalling radio bearers says :_  <br>
 
 **SRB2 is for RRC messages which include logged measurement information as well as for NAS messages, all using DCCH logical channel. SRB2 has a lower-priority than SRB1 and is always configured by E-UTRAN after security activation.** <br>
 
-Also 36.331 defines the SRB mapping for each message as shown below. I recommend you to pay attention to these mapping examples. If SRB number does not match between the sender and the reciever, the message would not reach the destination even though the message is properly sent and reach the lower layer of the destination.
+Also 36.331 defines the SRB mapping for each message as shown below. I recommend you to pay attention to these mapping examples.
+
+:boom: _If SRB number does not match between the sender and the reciever, the message would not reach the destination even though the message is properly sent and reach the lower layer of the destination._
 
 ####  MasterInformationBlock
 1. Signalling radio bearer: N/A
@@ -102,4 +104,6 @@ SRB1 is also used to encapsulate NAS message if SRB2 has not been configured. <b
 SRB2 has lower priority then SRB1 and it is always configured after security activation.<br>
 SRB0 uses transparent mode RLC while SRB1 and SRB2 use acknowledged mode RLC.
 
-[http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html)
+_References:_ <br>
+1. [http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html)
+2. [http://www.sharetechnote.com/html/Handbook_LTE_SRB_Mapping.html](http://www.sharetechnote.com/html/Handbook_LTE_SRB_Mapping.html) ---> very Good reference :punch:
