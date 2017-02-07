@@ -105,5 +105,5 @@ SRB2 has lower priority then SRB1 and it is always configured after security act
 SRB0 uses transparent mode RLC while SRB1 and SRB2 use acknowledged mode RLC.
 
 _References:_ <br>
-1. [http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html) <br>
+1. [http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html)
 2. [http://www.sharetechnote.com/html/Handbook_LTE_SRB_Mapping.html](http://www.sharetechnote.com/html/Handbook_LTE_SRB_Mapping.html) ---> very Good reference :punch:
