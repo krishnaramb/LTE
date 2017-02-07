@@ -98,16 +98,20 @@ RRC messages can be used to encapsulate NAS messages for their transfer between 
 
 
 
+[1]: www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html "one"
 
 
-
+|LTE SRB Type  | Direction  |RRC message   |  	RLC Mode|  
+|---|---|---|---|
+|LTE SRB0 (CCCH) | 	Downlink|	RRC Connection Setup|Transparent|
 
 
 
 
 LTE SRB Type  | Direction  |RRC message   |  	RLC Mode
+---
 --|---|---|--
 LTE SRB0 (CCCH)  | 	Downlink  |   |  
       |Uplink |  RRC Connection Setup <br>RRC Connection Reject <br>RRC Connection Re-establishment
 RRC Connection Re-establishment reject
-  |   |   |  
+  |   |   |  |
