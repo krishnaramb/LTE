@@ -85,33 +85,21 @@ Also 36.331 defines the SRB mapping for each message as shown below. I recommend
 1. Direction: E-UTRAN to UE
 
 
+##### IMP notes
+**LTE Signalling radio bearers(SRB) are used for the transfer of RRC and NAS signalling messages.**
+* **RRC messages** are used as signalling between** UE and eNodeB.**
+*  **NAS(Non Access Stratum) message**s are used as signalling between** UE and MME.**
 
-LTE Signalling radio bearers(SRB) are used for the transfer of RRC and NAS signalling messages.
-* RRC messages are used as signalling between UE and eNodeB.
-*  NAS(Non Access Stratum) messages are used as signalling between UE and MME.
+RRC messages can be used **to encapsulate NAS messages** for their transfer between UE and eNodeB. The **S1** application protocol is later used to transfer NAS messages **between eNode and MME.**
+![srb types](images/1_srb_types.PNG)
 
-RRC messages can be used to encapsulate NAS messages for their transfer between UE and eNodeB. The S1 application protocol is later used to transfer NAS messages between eNode and MME.
+As mentioned in the LTE SRB table, there are three types of SRB in the LTE technology.
+*  SRB0 used to transfer RRC messages which use CCCH channel.
+*  SRB1 used to transfer RRC messages which use DCCH channel.
+*  SRB2 used to transfer RRC messages which use DCCH channel and encapsulates a NAS message.
 
+SRB1 is also used to encapsulate NAS message if SRB2 has not been configured. <br>
+SRB2 has lower priority then SRB1 and it is always configured after security activation.<br>
+SRB0 uses transparent mode RLC while SRB1 and SRB2 use acknowledged mode RLC.
 
-
-
-
-
-
-[1]: www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html "one"
-
-
-|LTE SRB Type  | Direction  |RRC message   |  	RLC Mode|  
-|---|---|---|---|
-|LTE SRB0 (CCCH) | 	Downlink|	RRC Connection Setup|Transparent|
-
-
-
-
-LTE SRB Type  | Direction  |RRC message   |  	RLC Mode
----
---|---|---|--
-LTE SRB0 (CCCH)  | 	Downlink  |   |  
-      |Uplink |  RRC Connection Setup <br>RRC Connection Reject <br>RRC Connection Re-establishment
-RRC Connection Re-establishment reject
-  |   |   |  |
+[http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html)
