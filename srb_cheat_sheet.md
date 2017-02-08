@@ -136,5 +136,5 @@ If the UE is unable to comply with (part of) the configuration included in the R
 
 
 _References:_ <br>
-1. [http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html)
+1. [http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html](http://www.rfwireless-world.com/Tutorials/LTE-signalling-radio-bearers.html) <br>
 2. [http://www.sharetechnote.com/html/Handbook_LTE_SRB_Mapping.html](http://www.sharetechnote.com/html/Handbook_LTE_SRB_Mapping.html) ---> very Good reference :punch:
